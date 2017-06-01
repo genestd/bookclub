@@ -6,6 +6,7 @@ import Login from '../components/Login'
 import Signup from '../components/Signup'
 import MyBooks from '../components/MyBooks'
 import AllBooks from '../components/AllBooks'
+import Settings from '../components/Settings'
 
 var routes =
   (<Route path='/' component={App}>
@@ -14,6 +15,7 @@ var routes =
     <Route path="/Signup" component={Signup}/>
     <Route path="/MyBooks" component={MyBooks}/>
     <Route path="/AllBooks" component={AllBooks}/>
+    <Route path="/Settings" component={Settings}/>
   </Route>)
 
 export default routes;

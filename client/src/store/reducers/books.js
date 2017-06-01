@@ -1,4 +1,4 @@
-import {LOGIN, LOGOUT, SET_STATS, SET_POPULAR, SET_FILTER, SET_ALL_BOOKS, SET_REFERRER} from '../actions'
+import {LOGIN, LOGOUT, SET_STATS, SET_POPULAR, SET_FILTER, SET_ALL_BOOKS, SET_REFERRER, UPDATE_USER} from '../actions'
 import update from 'immutability-helper'
 
 const INITIAL_STATE = {
@@ -55,6 +55,8 @@ function books(state=INITIAL_STATE, action){
       return Object.assign({}, state, {referrer: action.payload})
       break
 
+    case UPDATE_USER:
+      return Object.assign({}, state, {user: action.payload})
     default:
       return state
   }

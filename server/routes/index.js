@@ -143,4 +143,18 @@ module.exports = function(app, passport){
           })
         })
       })
+
+    app.route('/updateuser')
+      .post(function(req,res){
+        BookUser.findOne({username: req.body.username}, function(err, result){
+          if(err){ console.log(err)}
+          for(key in req.body){
+            console.log(key, req.body[key])
+            result[key] = req.body[key]
+          }
+          result.save( function(err, final){
+            res.json({user: final})
+          })
+        })
+      })
 }

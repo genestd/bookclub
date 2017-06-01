@@ -155,7 +155,7 @@
   text-align: center;
   padding-bottom: 20px;
 }
-.login{
+.login, .settings{
   height: 100vh;
   position: relative;
   background-color: #44afe7;

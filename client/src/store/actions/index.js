@@ -4,6 +4,7 @@ export const SET_STATS = 'SET_STATS'
 export const SET_FILTER = 'SET_FILTER'
 export const SET_ALL_BOOKS = 'SET_ALL_BOOKS'
 export const SET_REFERRER = 'SET_REFERRER'
+export const UPDATE_USER = 'UPDATE_USER'
 
 export function login(user){
   return({
@@ -42,5 +43,12 @@ export function setReferrer(ref){
   return({
     type: SET_REFERRER,
     payload: ref
+  })
+}
+
+export function updateUser(user){
+  return({
+    type: UPDATE_USER,
+    payload: user
   })
 }
