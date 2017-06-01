@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FCC Book Trading Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link href="/css/foundation.css" rel="stylesheet">
+  <link href="/css/app.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="app"></div>
+  <script type="text/javascript">
+    function downloadJSAtOnload() {
+      var element = document.createElement("script");
+      element.src = "/js/vendor/jquery.js";
+      document.body.appendChild(element);
+      var element2 = document.createElement("script");
+      element2.src = "/js/vendor/what-input.js"
+      document.body.appendChild(element2)
+      var element3 = document.createElement("script");
+      element3.src = "/js/vendor/foundation.js"
+      document.body.appendChild(element3)
+      var element4 = document.createElement("script");
+      element4.src = "/js/app.js"
+      document.body.appendChild(element4)
+    }
+    if (window.addEventListener)
+      window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+      window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+  </script>
+</body>
+</html>
