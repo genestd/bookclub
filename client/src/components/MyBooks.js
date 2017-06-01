@@ -40,7 +40,7 @@ class MyBooks extends React.Component{
     let author_last = document.getElementById('author-last').value
     let author_first = document.getElementById('author-first').value
     let author_full = (author_first === '' ? author_last : author_last + "," + author_first)
-    axios.post('http://localhost:8080/coversearch', {title: title, author: author_full})
+    axios.post('/coversearch', {title: title, author: author_full})
       .then( result=>{
         //If we got a volume from google books, take the first coverImage
         //And build a Book object for DB
@@ -57,7 +57,7 @@ class MyBooks extends React.Component{
             borrows: 0
           }
           //Add the book to the DB
-          axios.post('http://localhost:8080/addbook', bookObj)
+          axios.post('/addbook', bookObj)
             .then( result=>{
               //Hide error callout
               if( !document.getElementById('searchErrorCallout').classList.contains("hide")){

@@ -22,7 +22,7 @@ class Home extends React.Component{
       $(window).trigger('load.zf.sticky');
     }
     // get data to populatet the website statistics
-    axios.get('http://localhost:8080/stats')
+    axios.get('/stats')
       .then( result=>{
         this.props.actions.setStats(result.data)
       })
@@ -31,7 +31,7 @@ class Home extends React.Component{
       })
 
     // get data to populate the "what's hot" section
-    axios.get('http://localhost:8080/allbooks')
+    axios.get('/allbooks')
       .then( result=>{
         this.props.actions.setAllBooks(result.data)
       })

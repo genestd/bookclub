@@ -21,7 +21,7 @@ class BookNav extends React.Component{
   logout(e){
     e.preventDefault()
     console.log('logging out')
-    axios.get('http://localhost:8080/logout')
+    axios.get('/logout')
       .then(result=>{
         this.props.actions.logout()
         this.props.router.push('/')

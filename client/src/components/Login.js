@@ -24,7 +24,7 @@ class Login extends React.Component{
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
 
-    axios.post('http://localhost:8080/login', {"email": email, "password": password})
+    axios.post('/login', {"email": email, "password": password})
       .then( result=>{
         //error returned by passport server
         if(!result.data.success){
@@ -50,7 +50,7 @@ class Login extends React.Component{
             this.props.router.push(this.props.books.referrer)
           }, 1500)
           //Load all books
-          axios.get('http://localhost:8080/allbooks')
+          axios.get('/allbooks')
             .then( result=>{
               this.props.actions.setAllBooks(result.data)
             })

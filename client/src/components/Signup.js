@@ -23,7 +23,7 @@ class Signup extends React.Component{
     let screenname = document.getElementById("username").value
 
 
-    axios.post('http://localhost:8080/signup', {email: email, password: password, screenname: screenname})
+    axios.post('/signup', {email: email, password: password, screenname: screenname})
       .then(result=>{
         if(!result.data.success){
           console.log('FAIL', result.data)

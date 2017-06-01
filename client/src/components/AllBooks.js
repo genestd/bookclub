@@ -18,7 +18,7 @@ class AllBooks extends React.Component{
     Foundation.reInit($('[data-sticky]'))
     Foundation.reInit($('[sticky-container]'))
     $(window).trigger('load.zf.sticky');
-    axios.get('http://localhost:8080/allbooks')
+    axios.get('/allbooks')
       .then(result=>{
         this.props.actions.setAllBooks(result.data)
       })

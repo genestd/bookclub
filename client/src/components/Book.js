@@ -11,7 +11,7 @@ class Book extends React.Component{
   }
 
   borrow(id){
-    axios.post('http://localhost:8080/borrow', {bookId: id, user: this.props.books.user.username})
+    axios.post('/borrow', {bookId: id, user: this.props.books.user.username})
       .then( result=>{
         if( result.data.success){
           this.props.actions.setAllBooks(result.data.books)
@@ -24,7 +24,7 @@ class Book extends React.Component{
   }
 
   return(id){
-    axios.post('http://localhost:8080/return', {bookId: id})
+    axios.post('/return', {bookId: id})
       .then( result=>{
         if( result.data.success){
           this.props.actions.setAllBooks(result.data.books)
